@@ -5,6 +5,7 @@ from aiogram import Bot, Dispatcher, Router
 
 from core.config import BOT_TOKEN, DEVELOPER_ID
 from handlers import include_routers
+from middlewares.language import setup_middleware
 from utils.queries import create_tables
 
 bot = Bot(token=BOT_TOKEN)
@@ -29,6 +30,8 @@ async def shutdown(bot: Bot):
 async def main():
     main_router = include_routers()
     dp.include_router(main_router)
+
+    setup_middleware(dp)
 
     dp.startup.register(startup)
     dp.shutdown.register(shutdown)

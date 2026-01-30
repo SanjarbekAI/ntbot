@@ -1,26 +1,32 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-share_contact = ReplyKeyboardMarkup(
-    keyboard=[[
-        KeyboardButton(text="☎️ Share phone number", request_contact=True)
-    ]], resize_keyboard=True
-)
 
-share_location = ReplyKeyboardMarkup(
-    keyboard=[[
-        KeyboardButton(text="📍 Share my location", request_location=True)
-    ]], resize_keyboard=True
-)
+async def share_contact(_):
+    return ReplyKeyboardMarkup(
+        keyboard=[[
+            KeyboardButton(text=_("☎️ Share phone number"), request_contact=True)
+        ]], resize_keyboard=True
+    )
 
-user_main_menu = ReplyKeyboardMarkup(
-    keyboard=[
-        [
-            KeyboardButton(text="🎓 Courses"),
-            KeyboardButton(text="🎉 Events"),
-        ],
-        [
-            KeyboardButton(text="☎️ Contacts"),
-            KeyboardButton(text="⚙️ Settings"),
-        ]
-    ], resize_keyboard=True
-)
+
+async def share_location(_):
+    return ReplyKeyboardMarkup(
+        keyboard=[[
+            KeyboardButton(text=_("📍 Share my location"), request_location=True)
+        ]], resize_keyboard=True
+    )
+
+
+async def user_main_menu(_):
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_("🎓 Courses")),
+                KeyboardButton(text=_("🎉 Events")),
+            ],
+            [
+                KeyboardButton(text=_("☎️ Contacts")),
+                KeyboardButton(text=_("⚙️ Settings")),
+            ]
+        ], resize_keyboard=True
+    )
