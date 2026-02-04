@@ -1,0 +1,1 @@
+members = ['creator', 'administrator', 'member', 'restricted']

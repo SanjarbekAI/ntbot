@@ -3,12 +3,21 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.types import ReplyKeyboardRemove
 
+from filters.is_admin import IsAdmin
+from keybaords.default.admin import admin_main_menu
 from keybaords.default.user import share_contact, share_location, user_main_menu
 from keybaords.inline.user import languages
 from states.user import RegisterState
 from utils.queries.users import get_user, add_user, update_user
 
 router = Router()
+
+
+@router.message(Command('start'), IsAdmin())
+async def admin_start_handler(message: types.Message, state: FSMContext, _):
+    text = _(f"Hello admin ") + message.from_user.full_name
+    await message.answer(text=text, reply_markup=await admin_main_menu(_))
+    await state.clear()
 
 
 @router.message(Command('start'))
