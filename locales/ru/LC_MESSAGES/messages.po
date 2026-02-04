@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-30 20:02+0500\n"
+"POT-Creation-Date: 2026-02-04 19:38+0500\n"
 "PO-Revision-Date: 2026-01-30 19:36+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -20,32 +20,52 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: handlers/start.py:18
+msgid "Hello admin "
+msgstr ""
+
+#: handlers/start.py:27
 msgid "🌏 Please select the language that you want"
 msgstr "🌏 Пожалуйста, выберите язык, который вы хотите использовать"
 
-#: handlers/start.py:22
+#: handlers/start.py:31
 msgid "Hello welcome back, "
 msgstr "Здравствуйте, с возвращением, "
 
-#: handlers/start.py:30
+#: handlers/start.py:42
 msgid "Please enter your full name"
 msgstr "Пожалуйста, введите ваше полное имя"
 
-#: handlers/start.py:39
+#: handlers/start.py:51
 msgid "👇 Please enter your phone number by button on the below"
 msgstr "👇 Пожалуйста, введите ваш номер телефона с помощью кнопки ниже"
 
-#: handlers/start.py:48
+#: handlers/start.py:60
 msgid "👇 Please enter your location by button on the below"
 msgstr "👇 Пожалуйста, укажите ваше местоположение с помощью кнопки ниже"
 
-#: handlers/start.py:62
+#: handlers/start.py:74
 msgid "✅ Successfully registered"
 msgstr "✅ Вы успешно зарегистрированы"
 
-#: handlers/start.py:65
+#: handlers/start.py:77
 msgid "❌ Something went wrong, please try again later"
 msgstr "❌ Что-то пошло не так, пожалуйста, попробуйте позже"
+
+#: keybaords/default/admin.py:8 keybaords/default/user.py:24
+msgid "🎓 Courses"
+msgstr "🎓 Курсы"
+
+#: keybaords/default/admin.py:9 keybaords/default/user.py:25
+msgid "🎉 Events"
+msgstr "🎉 Мероприятия"
+
+#: keybaords/default/admin.py:12
+msgid "⬆️ Send message"
+msgstr ""
+
+#: keybaords/default/admin.py:13 keybaords/default/user.py:29
+msgid "⚙️ Settings"
+msgstr "⚙️ Настройки"
 
 #: keybaords/default/user.py:7
 msgid "☎️ Share phone number"
@@ -55,19 +75,11 @@ msgstr "☎️ Поделиться номером телефона"
 msgid "📍 Share my location"
 msgstr "📍 Поделиться местоположением"
 
-#: keybaords/default/user.py:24
-msgid "🎓 Courses"
-msgstr "🎓 Курсы"
-
-#: keybaords/default/user.py:25
-msgid "🎉 Events"
-msgstr "🎉 Мероприятия"
-
 #: keybaords/default/user.py:28
 msgid "☎️ Contacts"
 msgstr "☎️ Контакты"
 
-#: keybaords/default/user.py:29
-msgid "⚙️ Settings"
-msgstr "⚙️ Настройки"
+#: middlewares/subscription.py:28
+msgid "Please join this channel"
+msgstr "Пожалуйста, присоединяйтесь к этому каналу"
 
