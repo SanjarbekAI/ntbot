@@ -14,3 +14,16 @@ users = """
 
         ) \
         """
+
+courses = """
+          CREATE TABLE IF NOT EXISTS courses
+          (
+              id         BIGSERIAL PRIMARY KEY,
+              image      VARCHAR(255),
+              title      JSON,
+              info       JSON,
+              is_active  BOOLEAN DEFAULT TRUE,
+              created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+          ) \
+          """
